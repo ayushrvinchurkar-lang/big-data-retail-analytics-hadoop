@@ -1,12 +1,52 @@
-# Python component
+# Python Component
 
-The project report describes a Python workflow for revenue prediction using a Random Forest regression model and evaluation metrics including MAE, RMSE, and R².
+This folder contains Python scripts for the Big Data Retail Analytics project.
 
-The original Python scripts were not included with the supplied materials, so no source code has been fabricated here. Add the actual scripts when recovered, or reconstruct and test them before claiming that the model is reproducible from this repository.
+## Scripts
 
-Suggested files once available:
-- `data_preprocessing.py`
-- `sales_forecasting.py`
-- `visualization.py`
+### 1. `generate_retail_dataset.py`
 
-The feature-importance chart in `../screenshots/` is evidence of a result, not a replacement for the original model code.
+Generates synthetic retail transaction data for analysis.
+
+The dataset includes:
+
+* Transaction IDs
+* Customer and product IDs
+* Product categories
+* Quantities and unit prices
+* Transaction dates
+* Store IDs and regions
+* Payment methods and discounts
+
+The script is configured to generate a dataset of approximately 520 MB.
+
+### 2. `retail_ml.py`
+
+Contains the machine-learning and visualization workflow for retail revenue analysis.
+
+The script includes:
+
+* Random Forest regression
+* Model evaluation using MAE, RMSE, and R²
+* Revenue analysis by product category
+* Monthly revenue trends
+* Revenue analysis by region
+* Actual-versus-predicted revenue visualization
+* Feature-importance visualization
+
+## Requirements
+
+The scripts use Python. The machine-learning workflow also requires compatible versions of its data-processing, machine-learning, and visualization libraries.
+
+## Running the Scripts
+
+Run these commands from your project directory:
+
+```bash
+python3 generate_retail_dataset.py
+python3 retail_ml.py
+```
+
+**Important:** The dataset generator creates a large CSV file. Ensure sufficient disk space is available before running it.
+
+Test the machine-learning script in your environment before relying on its results. The generated dataset and the original machine-learning outputs are not included in this repository.
